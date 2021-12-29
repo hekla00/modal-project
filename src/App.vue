@@ -1,12 +1,10 @@
 <template>
   <h1>{{ title }}</h1>
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-  <input type="text" ref="name" />
-  <button @click="handleClick">click me</button>
+  <Modal />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Modal from "./components/Modal.vue";
 
 export default {
   name: "App",
@@ -15,9 +13,9 @@ export default {
       title: "My First Vue App",
     };
   },
-  // components: {
-  //   HelloWorld,
-  // },
+  components: {
+    Modal,
+  },
   methods: {
     handleClick() {
       console.log(this.$refs.name);
