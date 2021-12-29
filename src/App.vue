@@ -1,6 +1,8 @@
 <template>
   <h1>{{ title }}</h1>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <input type="text" ref="name" />
+  <button @click="handleClick">click me</button>
 </template>
 
 <script>
@@ -16,6 +18,13 @@ export default {
   // components: {
   //   HelloWorld,
   // },
+  methods: {
+    handleClick() {
+      console.log(this.$refs.name);
+      this.$refs.name.classList.add("active");
+      this.$refs.focus();
+    },
+  },
 };
 </script>
 
