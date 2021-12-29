@@ -1,19 +1,21 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal />
+  <p>Welcome...</p>
+  <Modal :heading="heading" :text="text" theme="sale" />
 </template>
 
 <script>
 import Modal from "./components/Modal";
-
 export default {
   name: "App",
+  components: { Modal },
   data() {
     return {
-      title: "My First Vue App",
+      title: "My First Vue App!",
+      heading: "Sign up for the Givaway!",
+      text: "Grab your ninja swag for half price!",
     };
   },
-  components: { Modal },
 };
 </script>
 
